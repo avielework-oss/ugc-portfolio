@@ -135,39 +135,6 @@
     margin: 0;
   }
 
-  /* ---------- Stats ---------- */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .stat-card {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 32px 16px;
-    text-align: center;
-  }
-  .stat-num {
-    font-family: 'Adobe Caslon Pro', Georgia, serif;
-    font-size: 2.1rem;
-    color: var(--teal);
-  }
-  .stat-label {
-    margin-top: 8px;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-  }
-  .stat-edit {
-    font-size: 0.68rem;
-    color: var(--rust);
-    margin-top: 8px;
-    font-style: italic;
-  }
-
   /* ---------- Content grid ---------- */
   .grid {
     display: grid;
@@ -181,48 +148,16 @@
     display: flex;
     flex-direction: column;
   }
-  .slot {
+  .video-slot {
     aspect-ratio: 9 / 16;
-    background: var(--teal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    background: #000;
   }
-  .card:nth-child(3n+2) .slot { background: var(--teal-deep); }
-  .card:nth-child(3n+3) .slot { background: var(--rust); }
-
-  .slot-inner {
-    text-align: center;
-    color: var(--white);
-    padding: 20px;
+  .video-slot video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
-  .slot-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-    margin: 0 auto 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.18);
-    font-size: 16px;
-  }
-  .slot-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.9;
-  }
-  .card.has-embed { overflow: visible; }
-  .embed-wrap {
-    display: flex;
-    justify-content: center;
-    padding: 16px 16px 0;
-    background: var(--card-alt);
-    border-radius: 16px 16px 0 0;
-  }
-  .embed-wrap blockquote.tiktok-embed { margin: 0 !important; }
 
   .card-body { padding: 22px 24px 26px; }
   .card-body h3 {
@@ -264,90 +199,49 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">By the numbers</p>
-      <h2>Reach &amp; engagement</h2>
-    </div>
-    <div class="stats">
-      <div class="stat-card">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Followers</div>
-        <div class="stat-edit">edit me</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Avg. Views</div>
-        <div class="stat-edit">edit me</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Engagement Rate</div>
-        <div class="stat-edit">edit me</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Platforms</div>
-        <div class="stat-edit">edit me</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
       <p class="eyebrow">Portfolio</p>
       <h2>Featured content</h2>
     </div>
     <div class="grid">
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7657361411403681037" data-video-id="7657361411403681037" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="dieux-tube-wringer.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Dieux Tube Wringer</h3>
           <p>Beauty</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7527377844414975287" data-video-id="7527377844414975287" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="dries-van-noten.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Dries Van Noten Havana Gold</h3>
           <p>Perfume · Beauty</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7662510150175051022" data-video-id="7662510150175051022" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="medicube-pdrn.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Medicube PDRN Stick Review</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7623489363820727565" data-video-id="7623489363820727565" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="hanni-rich-rinse.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Hanni Rich Rinse</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7628671664481406222" data-video-id="7628671664481406222" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="dieux-instant-angel.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Dieux Instant Angel</h3>
@@ -355,54 +249,57 @@
         </div>
       </div>
       <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="ptr-patches.mp4"></video>
+        </div>
         <div class="card-body">
           <h3>Peter Thomas Roth Patches</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7532576532120816951" data-video-id="7532576532120816951" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="hanni-splash-salve.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Hanni Splash Salve</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7614937912525769998" data-video-id="7614937912525769998" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="rain-by-commodity.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Rain by Commodity</h3>
           <p>Perfume</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7570535723992927543" data-video-id="7570535723992927543" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="drydown-opening.mp4"></video>
         </div>
         <div class="card-body">
           <h3>The Drydown Perfume Boutique Grand Opening</h3>
           <p>Perfume</p>
         </div>
       </div>
-      <div class="card has-embed">
-        <div class="embed-wrap">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7661676251131825421" data-video-id="7661676251131825421" style="max-width: 100%; min-width: 260px;">
-            <section></section>
-          </blockquote>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="guerlain-store.mp4"></video>
         </div>
         <div class="card-body">
           <h3>Guerlain Store</h3>
           <p>Perfume</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="video-slot">
+          <video controls preload="metadata" playsinline src="hugo-review.mp4"></video>
+        </div>
+        <div class="card-body">
+          <h3>Hugo Reviewing Perfumes</h3>
+          <p>Perfume · Pets</p>
         </div>
       </div>
     </div>
@@ -412,5 +309,3 @@
 <footer>
   Anna Viele · @goldensniffs · <a href="mailto:thegoldensniffs@gmail.com">thegoldensniffs@gmail.com</a>
 </footer>
-
-<script async src="https://www.tiktok.com/embed.js"></script>
