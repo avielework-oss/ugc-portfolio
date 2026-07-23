@@ -70,19 +70,29 @@
 
   /* ---------- Hero ---------- */
   header.hero {
-    padding: 120px 32px 100px;
-    text-align: center;
+    padding: 100px 32px;
   }
-  .mark {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: var(--teal);
-    display: inline-flex;
+  .hero-inner {
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    margin-bottom: 28px;
+    gap: 56px;
+    text-align: center;
+  }
+  .hero-photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    display: block;
   }
   h1 {
     font-size: clamp(2.6rem, 6vw, 4.4rem);
@@ -126,6 +136,11 @@
   }
   .contact-line a { color: var(--teal); text-decoration: none; }
   .contact-line a:hover { color: var(--rust); }
+
+  @media (max-width: 700px) {
+    .hero-inner { flex-direction: column; gap: 32px; }
+    .hero-photo { width: 160px; height: 160px; }
+  }
 
   /* ---------- Sections ---------- */
   section { padding: 80px 32px; }
@@ -181,18 +196,24 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="mark">🐾</div>
-    <h1>Anna Viele</h1>
-    <div class="handle">@goldensniffs</div>
-    <p class="tagline">Beauty, skincare &amp; perfume reviews — with <em>a golden retriever's nose</em> for the good stuff.</p>
-    <div class="niches">
-      <span class="niche-pill">Beauty</span>
-      <span class="niche-pill">Skincare</span>
-      <span class="niche-pill">Perfume</span>
-      <span class="niche-pill">Pets</span>
-      <span class="niche-pill">Gen X</span>
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <img src="anna-hugo-photo.png" alt="Anna Viele holding her golden retriever puppy Hugo">
+      </div>
+      <div class="hero-text">
+        <h1>Anna Viele</h1>
+        <div class="handle">@goldensniffs</div>
+        <p class="tagline">Beauty, skincare &amp; perfume reviews — with <em>a golden retriever's nose</em> for the good stuff.</p>
+        <div class="niches">
+          <span class="niche-pill">Beauty</span>
+          <span class="niche-pill">Skincare</span>
+          <span class="niche-pill">Perfume</span>
+          <span class="niche-pill">Pets</span>
+          <span class="niche-pill">Gen X</span>
+        </div>
+        <div class="contact-line">For collabs: <a href="mailto:thegoldensniffs@gmail.com">thegoldensniffs@gmail.com</a></div>
+      </div>
     </div>
-    <div class="contact-line">For collabs: <a href="mailto:thegoldensniffs@gmail.com">thegoldensniffs@gmail.com</a></div>
   </div>
 </header>
 
