@@ -1,44 +1,47 @@
 <title>Anna Viele — @goldensniffs UGC Portfolio</title>
 <style>
   :root {
-    --cream: #f2f2f2;
-    --paper: #ece0c8;
-    --walnut: #3d2b1f;
-    --ink: #2e2015;
-    --mustard: #dfa53d;
-    --mustard-deep: #c88a2a;
-    --teal: #3e7d78;
-    --rust: #bf5b3b;
-    --olive: #77803c;
-    --card: #faf3e3;
-    --line: #2e2015;
+    --cream: #f4f1ea;
+    --card: #f6f6f6;
+    --card-alt: #f7f7f5;
+    --white: #ffffff;
+    --ink: #000000;
+    --ink-soft: #2b2b2b;
+    --muted: #666666;
+    --faint: #999999;
+    --teal: #3d6b72;
+    --teal-deep: #2f5459;
+    --rust: #c85a2a;
+    --gold: #e8b84b;
   }
   :root[data-theme="dark"] {
-    --cream: #241b13;
-    --paper: #1c150e;
-    --walnut: #f2e8d5;
-    --ink: #f2e8d5;
-    --mustard: #e8b455;
-    --mustard-deep: #f2c877;
-    --teal: #5aa39d;
-    --rust: #d97452;
-    --olive: #98a35a;
-    --card: #2c2117;
-    --line: #e8d9b8;
+    --cream: #17191a;
+    --card: #1f2223;
+    --card-alt: #212425;
+    --white: #26292a;
+    --ink: #f2f0ea;
+    --ink-soft: #ded9cd;
+    --muted: #aaa79d;
+    --faint: #7d7a72;
+    --teal: #5c9199;
+    --teal-deep: #6ea6ae;
+    --rust: #dd8355;
+    --gold: #e8b84b;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --cream: #241b13;
-      --paper: #1c150e;
-      --walnut: #f2e8d5;
-      --ink: #f2e8d5;
-      --mustard: #e8b455;
-      --mustard-deep: #f2c877;
-      --teal: #5aa39d;
-      --rust: #d97452;
-      --olive: #98a35a;
-      --card: #2c2117;
-      --line: #e8d9b8;
+      --cream: #17191a;
+      --card: #1f2223;
+      --card-alt: #212425;
+      --white: #26292a;
+      --ink: #f2f0ea;
+      --ink-soft: #ded9cd;
+      --muted: #aaa79d;
+      --faint: #7d7a72;
+      --teal: #5c9199;
+      --teal-deep: #6ea6ae;
+      --rust: #dd8355;
+      --gold: #e8b84b;
     }
   }
 
@@ -49,57 +52,59 @@
     font-family: 'Brandon Grotesque', Futura, 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif;
     background: var(--cream);
     color: var(--ink);
-    line-height: 1.5;
+    line-height: 1.6;
   }
-  h1, h3, .section-title {
+  h1, h2, h3, .display {
     font-family: 'Adobe Caslon Pro', 'Adobe Caslon', Caslon, Georgia, 'Times New Roman', serif;
+    font-weight: 400;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; position: relative; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
 
   /* ---------- Hero ---------- */
   header.hero {
-    position: relative;
-    padding: 90px 24px 70px;
+    padding: 120px 32px 100px;
     text-align: center;
-    overflow: hidden;
-    background: var(--paper);
-    border-bottom: 3px solid var(--ink);
   }
-  .hero-content { position: relative; z-index: 1; }
-
-  .badge {
+  .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--teal);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--rust);
-    border: 4px solid var(--ink);
-    font-size: 28px;
-    margin-bottom: 18px;
+    font-size: 20px;
+    margin-bottom: 28px;
   }
   h1 {
-    font-size: clamp(2.4rem, 6vw, 3.6rem);
-    margin: 0 0 6px;
-    letter-spacing: 0.01em;
-    font-weight: 500;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    margin: 0 0 10px;
+    line-height: 1.1;
   }
   .handle {
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
     color: var(--teal);
+    margin-bottom: 22px;
   }
   .tagline {
-    margin: 20px auto 0;
+    margin: 0 auto;
     max-width: 520px;
-    font-size: 1.05rem;
-    color: var(--ink);
-    opacity: 0.85;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
   }
+  .tagline em { color: var(--teal); font-style: italic; }
+
   .niches {
-    margin-top: 30px;
+    margin-top: 34px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -107,45 +112,27 @@
   }
   .niche-pill {
     font-size: 0.82rem;
-    font-weight: 500;
     letter-spacing: 0.02em;
     padding: 8px 18px;
-    border: 2px solid var(--ink);
-    border-radius: 4px;
-    color: var(--ink);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--ink-soft);
   }
-  .niche-pill:nth-child(5n+1) { background: var(--mustard); }
-  .niche-pill:nth-child(5n+2) { background: var(--teal); color: var(--cream); }
-  .niche-pill:nth-child(5n+3) { background: var(--rust); color: var(--cream); }
-  .niche-pill:nth-child(5n+4) { background: var(--olive); color: var(--cream); }
-  .niche-pill:nth-child(5n+5) { background: var(--cream); }
 
   .contact-line {
-    margin-top: 26px;
+    margin-top: 30px;
     font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    color: var(--muted);
   }
-  .contact-line a { color: var(--rust); text-decoration: none; border-bottom: 2px solid var(--rust); }
+  .contact-line a { color: var(--teal); text-decoration: none; }
+  .contact-line a:hover { color: var(--rust); }
 
   /* ---------- Sections ---------- */
-  section { padding: 64px 24px; }
-  .section-head { text-align: center; margin-bottom: 44px; }
-  .section-title {
-    display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    margin: 0 0 8px;
-    padding-bottom: 10px;
-    border-bottom: 4px solid var(--mustard);
-  }
-  .section-sub {
-    display: block;
-    color: var(--ink);
-    opacity: 0.65;
-    margin-top: 10px;
-    font-size: 0.92rem;
+  section { padding: 80px 32px; }
+  .section-head { text-align: center; margin-bottom: 56px; }
+  .section-head h2 {
+    font-size: 2.4rem;
+    margin: 0;
   }
 
   /* ---------- Stats ---------- */
@@ -153,34 +140,29 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
-    max-width: 760px;
+    max-width: 780px;
     margin: 0 auto;
   }
   .stat-card {
     background: var(--card);
-    border: 3px solid var(--ink);
-    border-radius: 6px;
-    padding: 26px 14px;
+    border-radius: 16px;
+    padding: 32px 16px;
     text-align: center;
-    box-shadow: 6px 6px 0 var(--ink);
   }
-  .stat-card:nth-child(1) { border-color: var(--rust); box-shadow: 6px 6px 0 var(--rust); }
-  .stat-card:nth-child(2) { border-color: var(--teal); box-shadow: 6px 6px 0 var(--teal); }
-  .stat-card:nth-child(3) { border-color: var(--mustard-deep); box-shadow: 6px 6px 0 var(--mustard-deep); }
-  .stat-card:nth-child(4) { border-color: var(--olive); box-shadow: 6px 6px 0 var(--olive); }
-
   .stat-num {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-family: 'Adobe Caslon Pro', Georgia, serif;
+    font-size: 2.1rem;
+    color: var(--teal);
   }
   .stat-label {
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
   }
   .stat-edit {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     color: var(--rust);
     margin-top: 8px;
     font-style: italic;
@@ -190,86 +172,84 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
+    gap: 28px;
   }
   .card {
-    background: var(--card);
-    border: 3px solid var(--ink);
-    border-radius: 8px;
+    background: var(--card-alt);
+    border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 8px 8px 0 var(--ink);
   }
-  .card:nth-child(6n+1) .slot { background: var(--mustard); }
-  .card:nth-child(6n+2) .slot { background: var(--teal); }
-  .card:nth-child(6n+3) .slot { background: var(--rust); }
-  .card:nth-child(6n+4) .slot { background: var(--olive); }
-  .card:nth-child(6n+5) .slot { background: var(--mustard-deep); }
-  .card:nth-child(6n+6) .slot { background: var(--teal); }
-
   .slot {
     aspect-ratio: 9 / 16;
-    border-bottom: 3px solid var(--ink);
+    background: var(--teal);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
   }
+  .card:nth-child(3n+2) .slot { background: var(--teal-deep); }
+  .card:nth-child(3n+3) .slot { background: var(--rust); }
+
   .slot-inner {
     text-align: center;
-    color: var(--cream);
+    color: var(--white);
     padding: 20px;
   }
   .slot-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
+    width: 46px;
+    height: 46px;
     margin: 0 auto 10px;
     border-radius: 50%;
-    background: var(--cream);
-    color: var(--ink);
-    font-size: 18px;
+    background: rgba(255,255,255,0.18);
+    font-size: 16px;
   }
   .slot-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
   }
-  .card-body { padding: 18px 20px 22px; }
+  .card.has-embed { overflow: visible; }
+  .embed-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 16px 16px 0;
+    background: var(--card-alt);
+    border-radius: 16px 16px 0 0;
+  }
+  .embed-wrap blockquote.tiktok-embed { margin: 0 !important; }
+
+  .card-body { padding: 22px 24px 26px; }
   .card-body h3 {
-    margin: 0 0 4px;
-    font-size: 1.05rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    margin: 0 0 6px;
+    font-size: 1.15rem;
   }
   .card-body p {
     margin: 0;
     font-size: 0.85rem;
-    opacity: 0.65;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    color: var(--muted);
   }
 
   footer {
     text-align: center;
-    padding: 44px 24px 64px;
-    background: var(--paper);
-    border-top: 4px solid var(--ink);
+    padding: 50px 32px 70px;
+    color: var(--muted);
     font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
   }
+  footer a { color: var(--teal); text-decoration: none; }
 </style>
 
 <header class="hero">
-  <div class="hero-content">
-    <div class="badge">🐾</div>
+  <div class="wrap">
+    <div class="mark">🐾</div>
     <h1>Anna Viele</h1>
     <div class="handle">@goldensniffs</div>
-    <p class="tagline">Beauty, skincare &amp; perfume reviews — with a golden retriever's nose for the good stuff.</p>
+    <p class="tagline">Beauty, skincare &amp; perfume reviews — with <em>a golden retriever's nose</em> for the good stuff.</p>
     <div class="niches">
       <span class="niche-pill">Beauty</span>
       <span class="niche-pill">Skincare</span>
@@ -284,8 +264,8 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="section-title">By the Numbers</span>
-      <span class="section-sub">Placeholder stats — swap in your real numbers</span>
+      <p class="eyebrow">By the numbers</p>
+      <h2>Reach &amp; engagement</h2>
     </div>
     <div class="stats">
       <div class="stat-card">
@@ -315,43 +295,63 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="section-title">Featured Content</span>
-      <span class="section-sub">Drop your videos or photos into each slot below</span>
+      <p class="eyebrow">Portfolio</p>
+      <h2>Featured content</h2>
     </div>
     <div class="grid">
-      <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7657361411403681037" data-video-id="7657361411403681037" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
         <div class="card-body">
-          <h3>Maya Njie Discovery Set Review</h3>
+          <h3>Dieux Tube Wringer</h3>
+          <p>Beauty</p>
+        </div>
+      </div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7527377844414975287" data-video-id="7527377844414975287" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="card-body">
+          <h3>Dries Van Noten Havana Gold</h3>
           <p>Perfume · Beauty</p>
         </div>
       </div>
-      <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
-        <div class="card-body">
-          <h3>Dries Van Noten Havana Gold Review</h3>
-          <p>Perfume · Beauty</p>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7662510150175051022" data-video-id="7662510150175051022" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
         </div>
-      </div>
-      <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
         <div class="card-body">
           <h3>Medicube PDRN Stick Review</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7623489363820727565" data-video-id="7623489363820727565" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
         <div class="card-body">
-          <h3>Hanni Rich Rinse Review</h3>
+          <h3>Hanni Rich Rinse</h3>
           <p>Skincare</p>
         </div>
       </div>
-      <div class="card">
-        <div class="slot"><div class="slot-inner"><span class="slot-icon">▶</span><span class="slot-label">Video slot</span></div></div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7628671664481406222" data-video-id="7628671664481406222" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
         <div class="card-body">
-          <h3>Pets × Perfume Crossover</h3>
-          <p>Golden retriever reviews perfume · Pets · Perfume</p>
+          <h3>Dieux Instant Angel</h3>
+          <p>Beauty</p>
         </div>
       </div>
       <div class="card">
@@ -361,10 +361,56 @@
           <p>Skincare</p>
         </div>
       </div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7532576532120816951" data-video-id="7532576532120816951" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="card-body">
+          <h3>Hanni Splash Salve</h3>
+          <p>Skincare</p>
+        </div>
+      </div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7614937912525769998" data-video-id="7614937912525769998" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="card-body">
+          <h3>Rain by Commodity</h3>
+          <p>Perfume</p>
+        </div>
+      </div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7570535723992927543" data-video-id="7570535723992927543" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="card-body">
+          <h3>The Drydown Perfume Boutique Grand Opening</h3>
+          <p>Perfume</p>
+        </div>
+      </div>
+      <div class="card has-embed">
+        <div class="embed-wrap">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@goldensniffs/video/7661676251131825421" data-video-id="7661676251131825421" style="max-width: 100%; min-width: 260px;">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="card-body">
+          <h3>Guerlain Store</h3>
+          <p>Perfume</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  Anna Viele · @goldensniffs · thegoldensniffs@gmail.com
+  Anna Viele · @goldensniffs · <a href="mailto:thegoldensniffs@gmail.com">thegoldensniffs@gmail.com</a>
 </footer>
+
+<script async src="https://www.tiktok.com/embed.js"></script>
