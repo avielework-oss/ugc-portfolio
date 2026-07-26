@@ -192,6 +192,35 @@
     font-size: 0.85rem;
   }
   footer a { color: var(--teal); text-decoration: none; }
+
+  /* ---------- Collaborations strip ---------- */
+  .collabs { padding: 0 32px 70px; }
+  .collabs .section-head { margin-bottom: 36px; }
+  .collabs .section-head h2 { font-size: 1.7rem; }
+  .brand-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px 18px;
+  }
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card);
+    padding: 18px 30px;
+    border-radius: 999px;
+    height: 64px;
+  }
+  .brand-mark img {
+    max-height: 32px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
 </style>
 
 <header class="hero">
@@ -216,6 +245,23 @@
     </div>
   </div>
 </header>
+
+<section class="collabs">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Brand partners</p>
+      <h2>Collaborations with</h2>
+    </div>
+    <div class="brand-row">
+      <span class="brand-mark"><img src="dvn-perfume-logo.png" alt="Dries Van Noten"></span>
+      <span class="brand-mark"><img src="dieux-logo.png" alt="Dieux"></span>
+      <span class="brand-mark"><img src="hanni-logo.png" alt="Hanni"></span>
+      <span class="brand-mark"><img src="linen-tutu-logo.png" alt="Linen Tutu"></span>
+      <span class="brand-mark"><img src="bark-box-logo.png" alt="Bark Box"></span>
+      <span class="brand-mark"><img src="beekman-1802-logo.png" alt="Beekman 1802"></span>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
